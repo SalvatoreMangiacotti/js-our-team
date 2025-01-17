@@ -60,12 +60,15 @@ for (let team of teamMembers) {
 
   htmlElements += `
     <div class="team_card">
-        <img src="${img}">
-        <div class="team_card-text">
-            <h2>${name}</h2>
-            <h3>${role}</h3>
-            <span>${email}</span>
-        </div>
+
+      <img src="${img}">
+
+      <div class="team_card-text">
+        <h2>${name}</h2>
+        <h3>${role}</h3>
+        <span>${email}</span>
+      </div>
+
     </div>
   `;
 
