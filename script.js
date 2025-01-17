@@ -37,11 +37,41 @@ const teamMembers = [
   }
 ];
 
-// Dato un array di oggetti rappresentante un team di un’azienda, 
-// creare una pagina dedicata in cui mostrare una card per ciascun componente.
-// (trovate l’array del team all’interno della cartella in allegato)
+
+// Dato un array di oggetti rappresentante un team di un’azienda, creare una pagina dedicata in cui mostrare una card per ciascun componente.
+
+// Seleziono l'elemento html
+
+let mainContainer = document.querySelector('.container');
+
+// Creo una variabile con un valore di stringa vuota
+
+let htmlElements = "";
+
+// Ciclo sull'array
+
+for (let team of teamMembers) {
+
+  // Seleziono le proprietà degli oggetti
+
+  const { name, role, email, img } = team;
+
+  // Creo degli elementi HTML assegnandoli alla variabile creata in precedenza (htmlElements)
+
+  htmlElements += `
+    <div class="team_card">
+        <img src="${img}">
+        <h2>${name}</h2>
+        <h3>${role}</h3>
+        <span>${email}</span>
+    </div>
+  `;
+
+  // Inserisco gli elementi creati all'interno della classe .container
+
+  mainContainer.innerHTML = htmlElements;
+
+}
 
 // Bonus
 // Rendere l’esercizio responsive, mandando a capo le card
-
-console.log("Hello World");
