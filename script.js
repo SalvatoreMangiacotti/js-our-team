@@ -1,3 +1,9 @@
+// JS-OUR-TEAM
+
+// Dato un array di oggetti rappresentante un team di un’azienda, creare una pagina dedicata in cui mostrare una card per ciascun componente.
+// Bonus
+// Rendere l’esercizio responsive, mandando a capo le card
+
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -37,12 +43,11 @@ const teamMembers = [
   }
 ];
 
-
-// Dato un array di oggetti rappresentante un team di un’azienda, creare una pagina dedicata in cui mostrare una card per ciascun componente.
+// SVOLGIMENTO
 
 // Seleziono l'elemento html
 
-let mainContainer = document.querySelector('.container');
+let mainContainer = document.querySelector('.cards_container');
 
 // Creo una variabile con un valore di stringa vuota
 
@@ -77,6 +82,3 @@ for (let team of teamMembers) {
   mainContainer.innerHTML = htmlElements;
 
 }
-
-// Bonus
-// Rendere l’esercizio responsive, mandando a capo le card
